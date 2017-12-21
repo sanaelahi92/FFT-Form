@@ -1,0 +1,54 @@
+//
+//  SettingsViewController.m
+//  FFT Form
+//
+//  Created by Welltime on 03/04/2015.
+//  Copyright (c) 2015 Welltime. All rights reserved.
+//
+
+#import "SettingsViewController.h"
+
+@interface SettingsViewController ()
+
+@end
+
+@implementation SettingsViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+     bool enabled=[[NSUserDefaults standardUserDefaults] boolForKey:@"ENABLE_EQUALITY_FORM"];
+    if(enabled)
+   [self.toggle_button setOn:YES animated:YES];
+    else
+        [self.toggle_button setOn:NO animated:YES];
+    // Do any additional setup after loading the view from its nib.
+}
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+- (IBAction)toggle_changed:(id)sender {
+if([self.toggle_button isOn])
+{NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setBool:YES forKey:@"ENABLE_EQUALITY_FORM"];
+    [userDefaults synchronize];
+}
+ else
+ {NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+     [userDefaults setBool:NO forKey:@"ENABLE_EQUALITY_FORM"];
+     [userDefaults synchronize];
+ }}
+@end

@@ -1,0 +1,13 @@
+PODS:
+  - MLPAutoCompleteTextField (1.5)
+  - PayPal-iOS-SDK (2.9.0)
+
+DEPENDENCIES:
+  - MLPAutoCompleteTextField (~> 1.4)
+  - PayPal-iOS-SDK (~> 2.9)
+
+SPEC CHECKSUMS:
+  MLPAutoCompleteTextField: ba4d507bbff2bd4f139d4197814fc8dd39caf77e
+  PayPal-iOS-SDK: 11e0adaee51c9edef35d6864ecfa927a8cf673cd
+
+COCOAPODS: 0.37.1

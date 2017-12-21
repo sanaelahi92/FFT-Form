@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="00j-5o-AC4">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="bC2-GL-jMz">
+            <objects>
+                <navigationController id="Dzl-i0-6Os" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="a77-7M-9HY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="00j-5o-AC4" kind="relationship" relationship="rootViewController" id="nJH-gc-v3p"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ni7-Jj-GnJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-601" y="-149"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Tlr-1N-CrS">
+            <objects>
+                <viewController storyboardIdentifier="login" id="00j-5o-AC4" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="J9n-Vq-23h"/>
+                        <viewControllerLayoutGuide type="bottom" id="zxG-Il-nSo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hch-mU-zXm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5S0-Lw-I1G">
+                                <rect key="frame" x="200" y="354" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="00j-5o-AC4" id="TWD-G1-QYi"/>
+                                </connections>
+                            </textField>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CTb-vS-Gal">
+                                <rect key="frame" x="-13" y="50" width="794" height="44"/>
+                                <color key="barTintColor" red="0.30366983260000002" green="0.73325154709999996" blue="0.73325154709999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Friends and Family Testing" id="OQU-wN-JTL"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFR-HR-beI">
+                                <rect key="frame" x="200" y="432" width="374" height="32"/>
+                                <color key="backgroundColor" red="0.33364682210000002" green="0.60768684240000004" blue="0.80450813139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="0.9818719789" blue="0.94802623109999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="login_click:" destination="00j-5o-AC4" eventType="touchUpInside" id="Skc-gQ-DNL"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="boU-mY-IAJ">
+                                <rect key="frame" x="200" y="309" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="00j-5o-AC4" id="LmW-kN-tX2"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.30366983260000002" green="0.73325154709999996" blue="0.73325154709999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5S0-Lw-I1G" firstAttribute="leading" secondItem="hch-mU-zXm" secondAttribute="leadingMargin" constant="184" id="7Md-kf-N40"/>
+                            <constraint firstItem="boU-mY-IAJ" firstAttribute="leading" secondItem="hch-mU-zXm" secondAttribute="leadingMargin" constant="184" id="P0H-jg-j09"/>
+                            <constraint firstItem="CTb-vS-Gal" firstAttribute="leading" secondItem="hch-mU-zXm" secondAttribute="leadingMargin" constant="-32" id="TeB-3u-uGg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vFR-HR-beI" secondAttribute="trailing" constant="178" id="mDW-Hx-Sh9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CTb-vS-Gal" secondAttribute="trailing" constant="-26" id="qrH-tW-MZg"/>
+                            <constraint firstItem="vFR-HR-beI" firstAttribute="leading" secondItem="hch-mU-zXm" secondAttribute="leadingMargin" constant="184" id="vCj-Zb-94Z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="boU-mY-IAJ" secondAttribute="trailing" constant="178" id="vPk-du-OJG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5S0-Lw-I1G" secondAttribute="trailing" constant="178" id="wVQ-fe-qY2"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="sMU-ZD-Ijv"/>
+                    <navigationItem key="navigationItem" id="GXd-iw-ie0"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="login_btn" destination="vFR-HR-beI" id="GxG-Kd-Ou9"/>
+                        <outlet property="password" destination="5S0-Lw-I1G" id="g5k-No-loh"/>
+                        <outlet property="username" destination="boU-mY-IAJ" id="GWG-5u-vWb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VZj-60-5rJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="355" y="217"/>
+        </scene>
+    </scenes>
+</document>
